@@ -1,0 +1,288 @@
+---
+title: PKU VDIG Lab
+labNameBig: Lab of Visual Data Interpreting and Generation
+labNameSmall: Wangxuan Institute of Computer Technology, Peking University
+labNameDescript: WRITE A SLOGAN HERE !!!
+layout: default
+color: 	Black
+---
+<section>
+
+    <!--Swiper-->
+    <div class="swiper-container swiper-slider" data-autoplay="5000" data-slide-effect="fade" data-loop="false">
+        <div class="jumbotron text-center">
+            <h1><font color="{{page.color}}">{{ page.labNameBig }}</font></h1>
+            <hr>
+            <h3><font color="{{page.color}}">{{ page.labNameSmall }}</font></h3>
+            <p class="big"><em><font color="{{page.color}}">{{ page.labNameDescript }}</font></em> </p>
+
+        </div>
+        <div class="swiper-wrapper"> 
+            <div class="swiper-slide" data-slide-bg="images/header_PKU_4_white.png">
+                <div class="swiper-slide-caption"></div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/header_PKU_3_white.png">
+                <div class="swiper-slide-caption"></div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/header_PKU_2_white.png">
+                <div class="swiper-slide-caption"></div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/header_PKU_1_white.png">
+                <div class="swiper-slide-caption"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<main class="page-content">
+
+
+
+    <!--    Recent News    -->
+    <section class="well well-inset-2">
+        <div class="container">
+            <h1 class="text-center font-weight-bold">Recent News</h1>
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <!-- Bootstrap collapse-->
+                    <!-- <div class="card-group-custom card-group-corporate" id="accordion1" role="tablist"
+                        aria-multiselectable="false"> -->
+                    <!-- Bootstrap card-->
+                    <article class="card card-custom card-corporate">
+                        <div class="card-header" role="tab">
+
+                            <div class="card-title">
+                                <a role="button"  class="collapsed"
+                                   aria-controls="accordion1Collapse1" aria-expanded="false">
+                                    [December 2023] BEV-MAE was accepted by <span style="color:#FF0000;font-weight:bold;">AAAI 2024</span>.
+                                    <div class="card-arrow"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-title">
+                                <a role="button"  class="collapsed"
+                                   aria-controls="accordion1Collapse1" aria-expanded="false">
+                                    [July 2023] SGFD was accepted by <span style="color:#FF0000;font-weight:bold;">ICCV 2023 workshop</span>.
+                                    <div class="card-arrow"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-title">
+                                <a role="button"  class="collapsed"
+                                aria-controls="accordion1Collapse1" aria-expanded="false">
+                                 [July 2023] SAMPLING was accepted by <span style="color:#FF0000;font-weight:bold;">ICCV 2023</span>.
+                                 <div class="card-arrow"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-title">
+                                <a role="button"  class="collapsed"
+                                   aria-controls="accordion1Collapse1" aria-expanded="false">
+                                    [March 2023] T-sea and DynamicDet was accepted by <span style="color:#FF0000;font-weight:bold;">CVPR 2023</span>.
+                                    <div class="card-arrow"></div>
+                                </a>
+                            </div>
+
+                            <div class="card-title">
+                                <a role="button"  class="collapsed"
+                                   aria-controls="accordion1Collapse1" aria-expanded="false">
+                                    [March 2023] FlowNAS was accepted by <span style="color:#FF0000;font-weight:bold;">IJCV 2023</span>.
+                                    <div class="card-arrow"></div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </article>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--    Latest Publications   -->
+    <section class="well well-sm well-inset-2 text-center text-lg-left">
+        <div class="container">
+            <h1 class="font-weight-bold text-center">Latest Publications</h1>
+            <div class="row row-30">
+                {% assign count=0%}
+                {% for post in site.posts %}
+                {% if post.type == 'paper' and count<3%}
+                {% assign count = count | plus:1 %}
+                <div class="col-lg-4">
+                    <article class="thumbnail thumbnail-4"><img src="{{ BASE_PATH }}/images/paper_teser/{{ post.teser }}" width=400px height=200px  alt="">
+                        <div class="caption">
+                            <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                            <p class="text-dark-variant-2">{{ post.author }}</p>
+                            <div class="blog-info">
+                                <div class="pull-md-left">
+                                    <time class="meta fa-calendar" datetime="2019">{{ post.year }}
+                                        {{ post.month }}</time>
+                                </div><a class="button-link" href="{{ post.url }}">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--    Recent Reports    -->
+<!--    <section class="well well-sm well-inset-2 text-center text-lg-left">-->
+<!--        <div class="container">-->
+<!--            <h1 class="font-weight-bold text-center">Recent Reports</h1>-->
+<!--            <div class="row row-30">-->
+<!--                <div class="col-lg-6">-->
+<!--                    <article class="thumbnail thumbnail-6 ">-->
+<!--                        <iframe src="//player.bilibili.com/player.html?bvid=BV1og41187De" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=300 width=100%> </iframe>-->
+<!--                        <div class="caption">-->
+<!--                            <h4><a>Sample for video</a></h4> <p class="text-dark-variant-2">Zhongyu Xia, just for test</p>-->
+<!--                            <div class="blog-info">-->
+<!--                                <div class="pull-md-left">-->
+<!--                                    <time class="meta fa-calendar" datetime="2023">2023 12</time>-->
+<!--                                </div><a class="button-link" href="https://www.bilibili.com/video/BV1og41187De">Read More</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </article>-->
+<!--                </div>-->
+<!--                <div class="col-lg-6">-->
+<!--                    <article class="thumbnail thumbnail-6 ">-->
+<!--                        <iframe src="//player.bilibili.com/player.html?bvid=BV1og41187De" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=300 width=100%> </iframe>-->
+<!--                        <div class="caption">-->
+<!--                            <h4><a>Sample for video</a></h4> <p class="text-dark-variant-2">Zhongyu Xia, just for test</p>-->
+<!--                            <div class="blog-info">-->
+<!--                                <div class="pull-md-left">-->
+<!--                                    <time class="meta fa-calendar" datetime="2023">2023 12</time>-->
+<!--                                </div><a class="button-link" href="https://www.bilibili.com/video/BV1og41187De">Read More</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </article>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row row-30">-->
+<!--                <div class="col-lg-6">-->
+<!--                    <article class="thumbnail thumbnail-6 ">-->
+<!--                        <iframe src="//player.bilibili.com/player.html?bvid=BV1og41187De" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=300 width=100%> </iframe>-->
+<!--                        <div class="caption">-->
+<!--                            <h4><a>Sample for video</a></h4> <p class="text-dark-variant-2">Zhongyu Xia, just for test</p>-->
+<!--                            <div class="blog-info">-->
+<!--                                <div class="pull-md-left">-->
+<!--                                    <time class="meta fa-calendar" datetime="2023">2023 12</time>-->
+<!--                                </div><a class="button-link" href="https://www.bilibili.com/video/BV1og41187De">Read More</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </article>-->
+<!--                </div>-->
+<!--                <div class="col-lg-6">-->
+<!--                    <article class="thumbnail thumbnail-6 ">-->
+<!--                        <iframe src="//player.bilibili.com/player.html?bvid=BV1og41187De" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=300 width=100%> </iframe>-->
+<!--                        <div class="caption">-->
+<!--                            <h4><a>Sample for video</a></h4> <p class="text-dark-variant-2">Zhongyu Xia, just for test</p>-->
+<!--                            <div class="blog-info">-->
+<!--                                <div class="pull-md-left">-->
+<!--                                    <time class="meta fa-calendar" datetime="2023">2023 12</time>-->
+<!--                                </div><a class="button-link" href="https://www.bilibili.com/video/BV1og41187De">Read More</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </article>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+
+
+    <!--    About Us & Awards -->
+    <section class="well well-sm well-inset-2 text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-12">
+                    <h1 class="font-weight-bold text-center">About Us</h1>
+                    <p class="lead big">
+                        The VDIG Lab is committed to research in perception directions such as computer vision and deep learning.
+                        In the past five years, we have published more than 30 papers in important journals or conferences such as IJCV, TIP, PR, NeurIPS, ICCV, CVPR, ECCV, AAAI, and MM.
+                        We have applied for more than 20 Chinese invention patents, and obtained 7 authorizations.
+                        Several technical achievements have been put into practical use in corresponding products or prototypes of Alibaba, Ant Financial, Baidu, Hisense, and China Aerospace Science and Industry Corporation.
+                        We have achieved good results in top competitions for autonomous vehicle/drone scene perception (WAD of CVPR 2018, VisDrone of ECCV 2018, MS COCO, nuScenes Detection, etc.).
+                        The laboratory has undertaken more than ten scientific research projects with funding of more than 16 million yuan,
+                        including 3 National Natural Science Foundation projects,
+                        1 Scientific and Technological Innovation 2030-Major project topic,
+                        1 173 Plan Key project topic,
+                        National Key R&D Plan project topic,
+                        Beijing Natural Science Foundation,
+                        and horizontal cooperation projects with well-known companies such as Changan, Alibaba, and Ant Financial.
+                        <br>
+                    </p>
+                </div>
+            </div>
+
+<!--            <div class="well well-sm well-inset-2 row justify-content-center">-->
+<!--                <div class="col-xl-12">-->
+<!--                    <h1 class="font-weight-bold text-center">Awards</h1>-->
+<!--                    <p class="lead big">-->
+<!--                        We have won the ...-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </section>
+
+
+
+    <!--  Collaboration  -->
+    <section class="well well-sm well-inset-2 text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <h1 class="font-weight-bold text-center">Collaboration</h1>
+                </div>
+            </div>
+            <div class="row margin-1">
+                <!--Owl Carousel-->
+                <div class="owl-carousel" data-autoplay="true" data-items="1" data-md-items="2" data-sm-items="1"
+                    data-lg-items="5" data-nav="true" data-margin="30" data-loop="true">
+                    <blockquote class="quote-2"><img class="img-rounded" href="http://www.icst.pku.edu.cn/" src="images/PKUlogo_red.png" alt="">
+                        <h6>
+                            <cite>Wangxuan Institute of Computer Technology</cite>
+                        </h6>
+<!--                        <p class="heading-6 font-italic font-base text-base">-->
+<!--                            <q> some introduction </q>-->
+<!--                        </p>-->
+                    </blockquote>
+
+                    <blockquote class="quote-2"><img class="img-rounded"  href="http://www.cis.pku.edu.cn/" src="images/PKUlogo_red.png" alt="">
+                        <h6>
+                            <cite>School of Intelligence Science and Technology</cite>
+                        </h6>
+<!--                        <p class="heading-6 font-italic font-base text-base">-->
+<!--                            <q> some introduction </q>-->
+<!--                        </p>-->
+                    </blockquote>
+
+                    <blockquote class="quote-2" ><img class="img-rounded" href="https://eecs.pku.edu.cn/" src="images/PKUlogo_red.png" alt="">
+                        <h6>
+                            <cite >School of Electronics Engineering and Computer Science</cite>
+                        </h6>
+<!--                        <p class="heading-6 font-italic font-base text-base">-->
+<!--                            <q> some introduction </q>-->
+<!--                        </p>-->
+                    </blockquote>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End section-->
+</main>
+
+
+
