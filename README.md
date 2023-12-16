@@ -4,4 +4,4 @@
 
 附图需要上传图片到images目录下。
 
-大家使用自己的账号fork、commit、pull qequests即可。
+大家使用自己的账号fork、commit、pull requests即可。
