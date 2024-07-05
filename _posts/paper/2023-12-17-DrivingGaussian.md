@@ -6,7 +6,7 @@ pro_type: 3D Reconstruction
 layout: post  #  Do not change this
 date:   2023-12-01 11:59:59 +0800  # paper pub data, only change year and month according to this format
 author: Xiaoyu Zhou, Zhiwei Lin, Xiaojun Shan, Yongtao Wang, Deqing Sun, Ming-Hsuan Yang # authors information
-venue:  ICML 2024
+venue:  CVPR 2024
 year:   2024  # paper year, number
 month:  March # paper month, full name
 projectPage: https://pkuvdig.github.io/DrivingGaussian/  # If has project page, link here, otherwise None
